@@ -1,6 +1,6 @@
 package Model;
 
-public abstract class Vehicles {
+public abstract class Vehicles implements GetInfo {
     protected String model;
     protected String registrationNumber;
 
@@ -12,15 +12,8 @@ public abstract class Vehicles {
     protected int maxSpeed;
     protected int weight;
 
-    public Vehicles(String model, String registrationNumber, String engineCylinders,
-                    int gasTank, String fuel, int loadCapacity, int maxSpeed, int weight) {
+    public Vehicles(String model, int maxSpeed) {
         this.model = model;
-        this.registrationNumber = registrationNumber;
-        this.engineCylinders = engineCylinders;
-        this.gasTank = gasTank;
-        this.fuel = fuel;
-        this.loadCapacity = loadCapacity;
         this.maxSpeed = maxSpeed;
-        this.weight = weight;
     }
 }
