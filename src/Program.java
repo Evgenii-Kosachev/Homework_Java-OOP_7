@@ -1,12 +1,10 @@
-package Data;
-
 import Model.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Data {
+public class Program {
     public static void main(String[] args) {
         List<Vehicles> garage = new ArrayList<>(Arrays.asList(
                 new Bike("BMW G 310 R", 145, "трубчатая, стальная", 6, "дисковые"),
