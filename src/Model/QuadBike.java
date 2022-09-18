@@ -1,11 +1,36 @@
 package Model;
 
-public class QuadBike extends Bike{
-    public QuadBike(String model, String registrationNumber, String engineCylinders,
-                    int gasTank, String fuel, int loadCapacity, int maxSpeed, int weight,
-                    String frame, int transmission, String brakeSystem, String suspension) {
+public class QuadBike extends Bike {
+    public QuadBike(String model, int maxSpeed, String frame, int transmission, String brakeSystem) {
+        super(model, maxSpeed, frame, transmission, brakeSystem);
+    }
 
-        super(model, registrationNumber, engineCylinders, gasTank, fuel, loadCapacity,
-                maxSpeed, weight, frame, transmission, brakeSystem, suspension);
+    @Override
+    public String toString() {
+        return "QuadBike{" +
+                "model='" + model + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", frame='" + frame + '\'' +
+                ", transmission=" + transmission +
+                ", brakeSystem='" + brakeSystem + '\'' +
+                '}';
+    }
+
+    @Override
+    public String getEnvironment() {
+        return "QuadBike{" +
+                "model='" + model + '\'' +
+                ", registrationNumber='" + registrationNumber + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", frame='" + frame + '\'' +
+                ", engineCylinders='" + engineCylinders + '\'' +
+                ", transmission=" + transmission +
+                ", brakeSystem='" + brakeSystem + '\'' +
+                ", suspension='" + suspension + '\'' +
+                ", gasTank=" + gasTank +
+                ", fuel='" + fuel + '\'' +
+                ", loadCapacity=" + loadCapacity +
+                ", weight=" + weight +
+                '}';
     }
 }
